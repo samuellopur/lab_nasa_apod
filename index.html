@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOD</title>
+</head>
+
+<body>
+    <main>
+        <section id="date-selector">
+            <label for="APOD-date">Selecciona una fecha: </label>
+            <input type="date" id="APOD-date">max =""
+            <button id="search-btn">Buscar</button>
+            <section id="APOD-container">
+                <h2 id="APOD-title"></h2>
+                <div id="APOD-media"></div>
+                <p id="APOD-explanation"></p>
+                <button id="favorite-btn">Guardar favoritos</button>
+            </section>
+
+            <section id="favorites">
+                <h2>Mis favoritos</h2>
+                <ul id="favorites-list"></ul>
+
+            </section>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
