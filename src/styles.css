@@ -1,0 +1,39 @@
+@import url('https://fonts.cdnfonts.com/css/nasa');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+#title{
+    font-family: 'Nasa', sans-serif;
+    font-size: 30px;
+}
+
+#date1{
+    font-size: small;
+}
+
+#explain, #date1 {
+    font-family: "Poppins", sans-serif;
+}
+
+#explain{
+    text-align: justify;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#media {
+    max-width: 400px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.master{
+    text-align: center;
+}
+
+#save{
+    display: none;
+}
