@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,26 @@
     <title>Apod</title>
 </head>
 <body>
-    <section class="main">
+    <nav class="navbar">
+        <div class="nav-d">
+            <a href="#" onclick="mostrarMain()">Inicio</a>
+        </div>
+
+        <a class="logo" href="#">
+            <img class="nasa" src="/src/assets/nasa.png" alt="nasa Logo">
+        </a>
+
+        <div class="nav-i">
+            <a href="#" onclick="mostrarFav()">Favoritos</a>
+        </div>
+    </nav>
+    <section class="main" id="main">
         <section class="master">
             <div id="title"></div>
             <div id="date1"></div>
             <img id="media" src="" alt="">
             <div id="explain"></div>
-            <button id="save">❤️</button>
+            <button id="save" onclick="save()">❤️</button>
         </section>
 
         <div class="form">
@@ -21,10 +34,13 @@
             <button onclick="buscar()">Buscar</button>
         </div>
 
-        <section class="like"></section>
-
+        
     </section>
     
+    <section id="like" class="like main">
+        <h3>Tus favoritos</h3>
+        <ul id="listaFav"></ul>
+    </section>
     
     
 </body>
