@@ -1,6 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/nasa');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+    min-height: 100vh;
+
+}
+
 #title{
     font-family: 'Nasa', sans-serif;
     font-size: 30px;
@@ -28,28 +37,97 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: wheat;
+
 }
 
 .master{
     text-align: center;
+    color: wheat;
 }
 
 #save{
     display: none;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 30px;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar a{
+.navbar a {
+    color: #fff;
     text-decoration: none;
+    font-weight: 600;
+    /* vertical - horizontal */
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
-.nasa{
-    width:200px;
+.navbar a:hover {
+    color: #00d4ff;
 }
 
+.logo img {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+#save {
+    display: none;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#save:hover {
+    transform: scale(1.1);
+    background: #ff3366;
+}
+
+.form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.form input, 
+.form button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+.form input {
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.form button {
+    background: #00d4ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form button:hover {
+    background: #00a0c6;
+}
