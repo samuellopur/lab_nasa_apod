@@ -1,25 +1,32 @@
 let fechaActual = null;
+let hoy = new Date();
+let fecha = hoy.toISOString().split('T')[0];
 
 function buscar(){
     const date = document.getElementById('date').value;
-    const url = `https://api.nasa.gov/planetary/apod?api_key=Yafb9b8HzZHbEwwChg2JKYMYgpgTt7gnspDT82YY&date=${date}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            fechaActual = {
-                title: data.title,
-                date: data.date,
-                img: data.url,
-                explanation: data.explanation
+    if (date > fecha){
+        alert("Ey loco que pasa vale mia");
+        return;
+    }else{
+        const url = `https://api.nasa.gov/planetary/apod?api_key=Yafb9b8HzZHbEwwChg2JKYMYgpgTt7gnspDT82YY&date=${date}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                fechaActual = {
+                    title: data.title,
+                    date: data.date,
+                    img: data.url,
+                    explanation: data.explanation
+                }
+                document.getElementById('title').textContent = data.title;
+                document.getElementById('date1').textContent = data.date
+                document.getElementById('media').src = data.url
+                document.getElementById('explain').innerHTML = data.explanation;
             }
-            document.getElementById('title').textContent = data.title;
-            document.getElementById('date1').textContent = data.date
-            document.getElementById('media').src = data.url
-            document.getElementById('explain').innerHTML = data.explanation;
-        }
-    )
-    let button = document.getElementById('save');
-    button.style.display = "block";
+        )
+        let button = document.getElementById('save');
+        button.style.display = "block";
+    }
     
 }
 
